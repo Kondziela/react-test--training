@@ -44,3 +44,42 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
+
+## Preska
+
+Jest - do odpalania testów
+React testing Library - nakładka na niego
+
+Rodzaje testów: unit, integracje, E2E
+
+Testy
+given, when, then
+
+
+Init APP
+npx create-react-app . --template typescript
+
+npm run test -> potem a odpala testy w watch mode -> odpala testy tylko w zmienionych plikach
+może być regex
+czytanie błędów testów
+debugging
+console.log()
+
+Test Driven Development (TDD) -napisz test przed kodem ???
+Napiszemy test jak w greet.tsx
+test('Greet renders correctly', () => {
+render(<Greet />)
+const helloElement = screen.getByText(/hello/i);
+expect(helloElement).toBeInTheDocument();
+});
+
+test('Greet renders with name', () => {
+render(<Greet name='Arti'/>)
+const helloElement = screen.getByText(/hello arti/i);
+expect(helloElement).toBeInTheDocument();
+});
+
+
+Opcje odpalania testów -> można dać filtrowanie
+
+grupowanie -> wykorzystanie describe
